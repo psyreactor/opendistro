@@ -28,7 +28,6 @@ RSpec.configure do |config|
     Opendistro.verify_ssl = false
   end
 end
-auth = Base64.strict_encode64("#{Opendistro.username}:#{Opendistro.password}")
 
 %i[get post put delete patch].each do |method|
   define_method "stub_#{method}" do |path, fixture, status_code = 200|
@@ -39,6 +38,6 @@ auth = Base64.strict_encode64("#{Opendistro.username}:#{Opendistro.password}")
 
   define_method "a_#{method}" do |path|
     a_request(method, "#{Opendistro.endpoint}#{path}")
-      .with(headers: { 'Authorization' => 'Basic YWRtaW46YWRtaW4='})
+      .with(headers: { 'Authorization' => 'Basic YWRtaW46YWRtaW4=' })
   end
 end

@@ -40,7 +40,7 @@ module Opendistro
       self.user_agent     = DEFAULT_USER_AGENT
       self.verify_ssl     = ENV['OPENDISTRO_API_VERIFY_SSL'] || DEFAULT_VERIFY_SSL
     end
-    
+
     private
 
     # Allows HTTParty config to be specified in ENV using YAML hash.

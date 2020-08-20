@@ -28,6 +28,5 @@ module Opendistro
     def only_show_last_four_chars(password)
       "#{'*' * (password.size - 4)}#{password[-4..-1]}"
     end
-
   end
 end

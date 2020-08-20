@@ -34,7 +34,7 @@ module Opendistro
 
     # Decodes a JSON response into Ruby object.
     def self.decode(response)
-      response ? JSON.load(response) : {}
+      response ? JSON.parse(response) : {}
     rescue JSON::ParserError
       raise Error::Parsing, 'The response is not a valid JSON'
     end
@@ -70,7 +70,7 @@ module Opendistro
 
     # Sets a base_uri and default_params for requests.
     # @raise [Error::MissingCredentials] if endpoint not set.
-    def request_defaults()
+    def request_defaults
       raise Error::MissingCredentials, 'Please set an endpoint to API' unless @endpoint
     end
 
@@ -81,6 +81,7 @@ module Opendistro
     # @raise [Error::MissingCredentials] if private_token and auth_token are not set.
     def authorization_header
       raise Error::MissingCredentials, 'Please provide a private_token or auth_token for user' if @username.nil? || @password.nil?
+
       auth = Base64.encode64("#{@username}:#{@password}")
       { 'Authorization' => "Basic #{auth}" }
     end

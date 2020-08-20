@@ -8,9 +8,9 @@ AllCops:
   NewCops: enable
 
 Layout/LineLength:
-  Max: 123
+  Max: 130
   Exclude:
-    - 'lib/gitlab/client/*'
+    - 'lib/opendistro/client/*'
     - 'spec/**/*'
 
 Metrics/BlockLength:
@@ -22,8 +22,8 @@ Style/Documentation:
 
 Style/ClassAndModuleChildren:
   Exclude:
-    - 'lib/gitlab/*'
-    - 'lib/gitlab/client/*'
+    - 'lib/opendistro/*'
+    - 'lib/opendistro/client/*'
 
 Lint/NonDeterministicRequireOrder:
   Enabled: false
@@ -36,3 +36,6 @@ Style/HashTransformKeys:
 
 Style/HashTransformValues:
   Enabled: true
+
+Lint/MissingSuper:
+  Enabled: false

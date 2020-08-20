@@ -35,7 +35,7 @@ module Opendistro
       end
     end
 
-    def respond_to_missing?(method_name, include_private = false)
+    def respond_to_missing?(method_name, include_private: false)
       super || @file.respond_to?(method_name, include_private)
     end
 

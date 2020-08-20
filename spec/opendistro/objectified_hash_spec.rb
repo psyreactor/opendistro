@@ -13,7 +13,7 @@ describe Opendistro::ObjectifiedHash do
     let(:oh) { described_class.new(hash) }
 
     it 'allows to call Hash methods' do
-      expect(oh.dig('foo')).to eq('bar')
+      expect(oh['foo']).to eq('bar')
       expect(oh.merge(key: :value)).to eq({ 'foo' => 'bar', key: :value })
     end
 

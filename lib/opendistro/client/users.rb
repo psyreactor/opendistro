@@ -10,7 +10,7 @@ class Opendistro::Client
     #   Opendistro.users
     #
     # @return [Opendistro::ObjectifiedHash]
-    def users()
+    def users
       get('/_opendistro/_security/api/internalusers/')
     end
 
@@ -39,9 +39,9 @@ class Opendistro::Client
     # @param  [String] password(required) The password of a user.
     # @param  [Hash] options A customizable set of options.
     # @return [Opendistro::ObjectifiedHash] Information about created user.
-    def create_user(username, password, options ={})
+    def create_user(username, password, options = {})
       raise ArgumentError, 'Missing required parameters' unless username || password
-  
+
       put("/_opendistro/_security/api/internalusers/#{username}", body: { password: password }.merge!(options))
     end
 

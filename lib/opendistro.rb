@@ -29,7 +29,7 @@ module Opendistro
   end
 
   # Delegate to Opendistro::Client
-  def self.respond_to_missing?(method_name, include_private = false)
+  def self.respond_to_missing?(method_name, include_private: false)
     client.respond_to?(method_name) || super
   end
 

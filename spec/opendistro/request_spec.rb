@@ -54,7 +54,7 @@ describe Opendistro::Request do
       @request.username = 'pepe'
       @request.password = 'rompe'
       @request.endpoint = 'https://example.com:9200'
-      path = "#{@request.endpoint}"
+      path = @request.endpoint.to_s
       auth = Base64.strict_encode64("#{@request.username}:#{@request.password}")
 
       # Stub Opendistro::Configuration
@@ -68,8 +68,8 @@ describe Opendistro::Request do
       expect(a_request(:get, path).with(headers: {
         'Authorization' => "Basic #{auth}",
         'Cookie' => 'opendistro_canary=true',
-        'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-        'User-Agent'=>'Ruby'
+        'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+        'User-Agent' => 'Ruby'
       }.merge(described_class.headers))).to have_been_made
     end
   end
