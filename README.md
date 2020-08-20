@@ -1,7 +1,7 @@
 # Opendistro
 
 [![Build Status](https://img.shields.io/github/workflow/status/psyreactor/opendistro-ruby/CI/master)](https://github.com/psyreactor/opendistro-ruby/actions?query=workflow%3ARuby)
-[![Inline docs](https://inch-ci.org/github/NARKOZ/opendistro.svg)](https://inch-ci.org/github/psyreactor/opendistro-ruby)
+[![Inline docs](https://inch-ci.org/github/NARKOZ/opendistro-ruby.svg)](https://inch-ci.org/github/psyreactor/opendistro-ruby)
 [![Gem version](https://img.shields.io/gem/v/opendistro.svg)](https://rubygems.org/gems/opendistro)
 [![License](https://img.shields.io/badge/license-BSD-red.svg)](https://github.com/psyreactor/opendistro/blob/master/LICENSE.txt)
 
@@ -14,7 +14,7 @@ This library will strive to achieve reliable coverage of the Opendistro API. Ple
 
 Initial versions of this gem to not achieve 100% coverage of the Opendistro API. Each release will include more and more endpoint support until there is 100% coverage.
 
-The layout and the code in this library is inspired by https://github.com/NARKOZ/opendistro. NARKOZ does a fantastic job of keeping code simple and achieving API feature parity.
+The layout and the code in this library is inspired by https://github.com/NARKOZ/gitlab. NARKOZ does a fantastic job of keeping code simple and achieving API feature parity.
 
 ## Installation
 
