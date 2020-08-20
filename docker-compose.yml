@@ -1,0 +1,27 @@
+---
+version: '3'
+services:
+  app:
+    build: .
+    volumes:
+      - ./:/app
+    env_file: docker.env
+
+  opendistro:
+    image: amazon/opendistro-for-elasticsearch:1.9.0
+    container_name: opendistro
+    environment:
+      discovery.type: single-node
+      bootstrap.memory_lock: "true" 
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+      nofile:
+        soft: 6553
+        hard: 65536
+    ports:
+      - 9200:9200
+      - 9600:9600
+
