@@ -1,7 +1,7 @@
 # Opendistro
 
 [![Build Status](https://img.shields.io/github/workflow/status/psyreactor/opendistro-ruby/CI/master)](https://github.com/psyreactor/opendistro-ruby/actions?query=workflow%3ARuby)
-[![Inline docs](https://inch-ci.org/github/NARKOZ/opendistro-ruby.svg)](https://inch-ci.org/github/psyreactor/opendistro-ruby)
+[![Inline docs](https://inch-ci.org/github/psyreactor/opendistro-ruby.svg?branch=master)](https://inch-ci.org/github/psyreactor/opendistro-ruby)
 [![Gem version](https://img.shields.io/gem/v/opendistro.svg)](https://rubygems.org/gems/opendistro)
 [![License](https://img.shields.io/badge/license-BSD-red.svg)](https://github.com/psyreactor/opendistro/blob/master/LICENSE.txt)
 
