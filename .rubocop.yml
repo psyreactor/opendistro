@@ -39,3 +39,10 @@ Style/HashTransformValues:
 
 Lint/MissingSuper:
   Enabled: false
+
+Style/OptionalBooleanParameter:
+  Enabled: false
+
+Security/JSONLoad:
+  Exclude:
+    - 'lib/opendistro/request.rb'
