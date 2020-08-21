@@ -7,11 +7,11 @@ require 'opendistro/version'
 Gem::Specification.new do |gem|
   gem.name          = 'opendistro'
   gem.version       = Opendistro::VERSION
-  gem.authors       = ['Nihad Abbasov', 'Sean Edge']
-  gem.email         = ['nihad@42na.in', 'asedge@gmail.com']
+  gem.authors       = ['Lucas Mariani']
+  gem.email         = ['marianilucas@gmail.com']
   gem.description   = 'Ruby client and CLI for Opendistro API'
   gem.summary       = 'A Ruby wrapper and CLI for the Opendistro API'
-  gem.homepage      = 'https://github.com/NARKOZ/opendistro'
+  gem.homepage      = 'https://github.com/psyreactor/opendistro'
 
   gem.files         = Dir['{lib}/**/*', 'LICENSE.txt', 'README.md', 'CHANGELOG.md']
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
