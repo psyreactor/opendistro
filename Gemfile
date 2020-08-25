@@ -8,3 +8,5 @@ gemspec
 gem 'pry'
 gem 'rubocop'
 gem 'rubocop-performance'
+gem 'simplecov'
+gem 'simplecov-lcov'

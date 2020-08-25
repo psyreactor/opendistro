@@ -2,6 +2,17 @@
 
 require 'rspec'
 require 'webmock/rspec'
+require 'simplecov'
+require 'simplecov-lcov'
+
+SimpleCov::Formatter::LcovFormatter.config.report_with_single_file = true
+SimpleCov.formatter = SimpleCov::Formatter::LcovFormatter
+SimpleCov::Formatter::LcovFormatter.config do |c|
+  c.output_directory = 'coverage'
+  c.lcov_file_name = 'lcov.info'
+  c.single_report_path = 'coverage/lcov.info'
+end
+SimpleCov.start
 
 require File.expand_path('../lib/opendistro', __dir__)
 
