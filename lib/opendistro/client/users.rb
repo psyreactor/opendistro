@@ -48,13 +48,13 @@ class Opendistro::Client
     # Updates a user.
     #
     # @example
-    #   Opendistro.edit_user('admin', { description: 'user admin' })
+    #   Opendistro.edit_user('admin', [{ 'op' => 'replace', 'path': '/description', 'value': 'new description' }])
     #
     # @param  [Integer] id The ID of a user.
     # @param  [Hash] options A customizable set of options.
     # @return [Opendistro::ObjectifiedHash] Information about created user.
     def edit_user(username, options = {})
-      patch("/_opendistro/_security/api/internalusers/#{username}", body: options)
+      patch("/_opendistro/_security/api/internalusers/#{username}", body: options.to_json)
     end
 
     # Deletes a user.

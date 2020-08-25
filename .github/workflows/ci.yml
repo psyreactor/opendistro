@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - develop
   pull_request:
     branches:
       - master
@@ -29,6 +30,12 @@ jobs:
         gem install bundler --no-document
         bundle install --jobs 4 --retry 3
         bundle exec rake
+
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+
   lint:
     runs-on: ubuntu-latest
     name: Rubocop lint
