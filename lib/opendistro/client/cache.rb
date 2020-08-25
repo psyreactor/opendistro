@@ -11,7 +11,7 @@ class Opendistro::Client
     #
     # @return [Opendistro::ObjectifiedHash]
     def flush_cache
-      delete("/_opendistro/_security/api/cache")
+      delete('/_opendistro/_security/api/cache')
     end
   end
 end
