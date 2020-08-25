@@ -35,8 +35,8 @@ class Opendistro::Client
     #   or
     #   Opendistro.create_user('joe','secret', { description: 'user for test' })
     #
-    # @param  [String] username(required) The username of a user.
-    # @param  [String] password(required) The password of a user.
+    # @param  [String] username (required) The username of a user.
+    # @param  [String] password (required) The password of a user.
     # @param  [Hash] options A customizable set of options.
     # @return [Opendistro::ObjectifiedHash] Information about created user.
     def create_user(username, password, options = {})
