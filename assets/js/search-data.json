@@ -1,0 +1,152 @@
+{"0": {
+    "doc": "Configuration",
+    "title": "Configuration",
+    "content": " ",
+    "url": "https://psyreactor.github.io/opendistro/config.html",
+    "relUrl": "/config.html"
+  },"1": {
+    "doc": "Configuration",
+    "title": "Create a connection",
+    "content": "Before you can make a request, you must give Opendistro your connection information. Opendistro.configure do |config| config.endpoint = 'https://example.net:9200' config.username = 'useradmin' config.password = 'secretpassword' # Optional # config.user_agent = 'Custom User Agent' # config.verify_ssl = false # config.ca_cert = '/etc/pki/ca_cert/ca.crt' end . ",
+    "url": "https://psyreactor.github.io/opendistro/config.html#create-a-connection",
+    "relUrl": "/config.html#create-a-connection"
+  },"2": {
+    "doc": "Configuration",
+    "title": "SSL config disabled",
+    "content": "Opendistro.configure do |config| config.endpoint = 'https://example.net:9200' config.username = 'useradmin' config.password = 'secretpassword' config.verify_ssl = false end . All of these parameters are also configurable via the top-level Opendistro object. ",
+    "url": "https://psyreactor.github.io/opendistro/config.html#ssl-config-disabled",
+    "relUrl": "/config.html#ssl-config-disabled"
+  },"3": {
+    "doc": "Configuration",
+    "title": "Top-level Opendistro Object",
+    "content": "# set an API endpoint Opendistro.endpoint = 'https://example.net:9200' # =&gt; \"https://example.net:9200\" # set a username Opendistro.username = 'admin' # =&gt; \"admin\" # set a user password Opendistro.password = 'secretpassword' # =&gt; \"admin\" # disable ssl verify Opendistro.httparty = { verify: false } # configure a proxy server Opendistro.http_proxy('proxyhost', 8888) # proxy server with basic auth Opendistro.http_proxy('proxyhost', 8888, 'proxyuser', 'strongpasswordhere') . Or, if you want to be really Unixy, these parameters are all configurable via environment variables: . ",
+    "url": "https://psyreactor.github.io/opendistro/config.html#top-level-opendistro-object",
+    "relUrl": "/config.html#top-level-opendistro-object"
+  },"4": {
+    "doc": "Configuration",
+    "title": "Opendistro will use these env",
+    "content": "ENV['OPENDISTRO_API_ENDPOINT'] = 'https://example.com:9000' ENV['OPENDISTRO_API_USER'] = 'admin' ENV['OPENDISTRO_API_PASSWORD'] = 'secretpassword' ENV['OPENDISTRO_API_CA_CERT_PATH'] = '/etc/pki/ca_cert' ENV['OPENDISTRO_API_HTTPARTY_OPTIONS'] = '{ headers: { 'Cookie' =&gt; 'opendistro_canary=true' }}' ENV['OPENDISTRO_API_VERIFY_SSL'] = false . You can also create a full Client object with hash parameters: . ",
+    "url": "https://psyreactor.github.io/opendistro/config.html#opendistro-will-use-these-env",
+    "relUrl": "/config.html#opendistro-will-use-these-env"
+  },"5": {
+    "doc": "Configuration",
+    "title": "object with hash parameters",
+    "content": "sonar = Opendistro.client( endpoint: 'https://example.com:9200', username: 'admin', password: 'secretpassword' httparty: { headers: { 'Cookie' =&gt; 'opendistro_canary=true' } } ) # =&gt; #&lt;Opendistro::Client:0x00000001e62408 @endpoint=\"https://api.example.com:9200\", @username=\"admin\", @password=\"secretpassword\",@user_agent=\"Opendistro Ruby Gem 2.0.0\"&gt; . ",
+    "url": "https://psyreactor.github.io/opendistro/config.html#object-with-hash-parameters",
+    "relUrl": "/config.html#object-with-hash-parameters"
+  },"6": {
+    "doc": "Contributing",
+    "title": "Contributing to Opendistro",
+    "content": "Please take a moment to review this document in order to make the contribution process easy and effective for everyone involved! . ",
+    "url": "https://psyreactor.github.io/opendistro/contrib.html#contributing-to-opendistro",
+    "relUrl": "/contrib.html#contributing-to-opendistro"
+  },"7": {
+    "doc": "Contributing",
+    "title": "Using the issue tracker",
+    "content": "You can use the issues tracker for: . | bug reports | feature requests | submitting pull requests | . Use Stackoverflow for questions and personal support requests. ",
+    "url": "https://psyreactor.github.io/opendistro/contrib.html#using-the-issue-tracker",
+    "relUrl": "/contrib.html#using-the-issue-tracker"
+  },"8": {
+    "doc": "Contributing",
+    "title": "Bug reports",
+    "content": "A bug is a demonstrable problem that is caused by the code in the repository. Good bug reports are extremely helpful - thank you! . Guidelines for bug reports: . | Use the GitHub issue search — check if the issue has already been reported. | Check if the issue has been fixed — try to reproduce it using the master branch in the repository. | Isolate and report the problem — ideally create a reduced test case. | . Please try to be as detailed as possible in your report. Include information about your Ruby, Opendistro client and Opendistro instance versions. Please provide steps to reproduce the issue as well as the outcome you were expecting! All these details will help developers to fix any potential bugs. Example: . Short and descriptive example bug report title . A summary of the issue and the environment in which it occurs. If suitable, include the steps required to reproduce the bug. | This is the first step | This is the second step | Further steps, etc. | . Any other information you want to share that is relevant to the issue being reported. This might include the lines of code that you have identified as causing the bug, and potential solutions (and your opinions on their merits). ",
+    "url": "https://psyreactor.github.io/opendistro/contrib.html#bug-reports",
+    "relUrl": "/contrib.html#bug-reports"
+  },"9": {
+    "doc": "Contributing",
+    "title": "Feature requests",
+    "content": "Feature requests are welcome. But take a moment to find out whether your idea fits with the scope and aims of the project. It’s up to you to make a strong case to convince the community of the merits of this feature. Please provide as much detail and context as possible. ",
+    "url": "https://psyreactor.github.io/opendistro/contrib.html#feature-requests",
+    "relUrl": "/contrib.html#feature-requests"
+  },"10": {
+    "doc": "Contributing",
+    "title": "Contributing Documentation",
+    "content": "Code documentation has a special convention: it uses YARD formatting and the first paragraph is considered to be a short summary. For methods say what it will do. For example write something like: . # Reverses the contents of a String or IO object. # # @param [String, #read] contents the contents to reverse # @return [String] the contents reversed lexically def reverse(contents) contents = contents.read if contents.respond_to? :read contents.reverse end . For classes, modules say what it is. For example write something like: . # Defines methods related to groups. module Groups . Keep in mind that the documentation notes might show up in a summary somewhere, long texts in the documentation notes create very ugly summaries. As a rule of thumb anything longer than 80 characters is too long. Try to keep unnecessary details out of the first paragraph, it’s only there to give a user a quick idea of what the documented “thing” does/is. The rest of the documentation notes can contain the details, for example parameters and what is returned. If possible include examples. For example: . # Gets information about a project. # # @example # Opendistro.user('peter') # Opendistro.user('opendistro') # # @param [Integer, String] id The ID or name of a project. # @return [Opendistro::ObjectifiedHash] def user(username) . This makes it easy to test the examples so that they don’t go stale and examples are often a great help in explaining what a method does. ",
+    "url": "https://psyreactor.github.io/opendistro/contrib.html#contributing-documentation",
+    "relUrl": "/contrib.html#contributing-documentation"
+  },"11": {
+    "doc": "Contributing",
+    "title": "Pull requests",
+    "content": "Good pull requests - patches, improvements, new features - are a fantastic help. They should remain focused in scope and avoid containing unrelated commits. IMPORTANT: By submitting a patch, you agree that your work will be licensed under the license used by the project. If you have any large pull request in mind (e.g. implementing features, refactoring code, etc), please ask first otherwise you risk spending a lot of time working on something that the project’s developers might not want to merge into the project. Please adhere to the coding conventions in the project (indentation, accurate comments, etc.) and don’t forget to add your own tests and documentation. When working with git, we recommend the following process in order to craft an excellent pull request: . | Fork the project, clone your fork, and configure the remotes: . # Clone your fork of the repo into the current directory git clone https://github.com/&lt;your-username&gt;/opendistro # Navigate to the newly cloned directory cd opendistro # Assign the original repo to a remote called \"upstream\" git remote add upstream https://github.com/psyreactor/opendistro . | If you cloned a while ago, get the latest changes from upstream: . git checkout master git pull upstream master . | Create a new topic branch (off of master) to contain your feature, change, or fix. IMPORTANT: Making changes in master is discouraged. You should always keep your local master in sync with upstream master and make your changes in topic branches. git checkout -b &lt;topic-branch-name&gt; . | Commit your changes in logical chunks. Keep your commit messages organized, with a short description in the first line and more detailed information on the following lines. Feel free to use Git’s interactive rebase feature to tidy up your commits before making them public. | Make sure all the tests are still passing. rake . | Push your topic branch up to your fork: . git push origin &lt;topic-branch-name&gt; . | Open a Pull Request with a clear title and description. | If you haven’t updated your pull request for a while, you should consider rebasing on master and resolving any conflicts. IMPORTANT: Never ever merge upstream master into your branches. You should always git rebase on master to bring your changes up to date when necessary. git checkout master git pull upstream master git checkout &lt;your-topic-branch&gt; git rebase master . | . Thank you for your contributions! . ",
+    "url": "https://psyreactor.github.io/opendistro/contrib.html#pull-requests",
+    "relUrl": "/contrib.html#pull-requests"
+  },"12": {
+    "doc": "Contributing",
+    "title": "Contributing",
+    "content": " ",
+    "url": "https://psyreactor.github.io/opendistro/contrib.html",
+    "relUrl": "/contrib.html"
+  },"13": {
+    "doc": "Client",
+    "title": "Client Api",
+    "content": "The Opendistro gem attempts to make the Opendistro API as object-oriented and Ruby-like as possible. All of the methods and API calls are heavily documented with examples inline using YARD. In order to keep the examples versioned with the code, this documentation only lists a few examples for using the Opendistro gem. Please see the inline documentation for the full API documentation . ",
+    "url": "https://psyreactor.github.io/opendistro/client/#client-api",
+    "relUrl": "/client/#client-api"
+  },"14": {
+    "doc": "Client",
+    "title": "Client",
+    "content": " ",
+    "url": "https://psyreactor.github.io/opendistro/client/",
+    "relUrl": "/client/"
+  },"15": {
+    "doc": "Install",
+    "title": "Opendistro",
+    "content": ". website | documentation . Opendistro is a Ruby wrapper for the Opendistro API this gem only supports Opendistro 1.9.0. ",
+    "url": "https://psyreactor.github.io/opendistro/#opendistro",
+    "relUrl": "/#opendistro"
+  },"16": {
+    "doc": "Install",
+    "title": "Installation",
+    "content": "Install it from rubygems: . gem install opendistro . Or add to a Gemfile: . gem 'opendistro' # gem 'opendistro', github: 'psyreactor/opendistro' . ",
+    "url": "https://psyreactor.github.io/opendistro/#installation",
+    "relUrl": "/#installation"
+  },"17": {
+    "doc": "Install",
+    "title": "Install",
+    "content": " ",
+    "url": "https://psyreactor.github.io/opendistro/",
+    "relUrl": "/"
+  },"18": {
+    "doc": "Users",
+    "title": "Users",
+    "content": " ",
+    "url": "https://psyreactor.github.io/opendistro/client/users.html#users",
+    "relUrl": "/client/users.html#users"
+  },"19": {
+    "doc": "Users",
+    "title": "Get Users",
+    "content": "user = Opendistro.users # =&gt; #&lt;Opendistro::ObjectifiedHash:46080 {hash: {\"logstash\"=&gt;{\"hash\"=&gt;\"\", \"reserved\"=&gt;false, \"hidden\"=&gt;false, \"backend_roles\"=&gt;[\"logstash\"], \"attributes\"=&gt;{}, \"description\"=&gt;\"Demo logstash user\", \"opendistro_security_roles\"=&gt;[], \"static\"=&gt;false}, \"snapshotrestore\"=&gt;{\"hash\"=&gt;\"\", \"reserved\"=&gt;false, \"hidden\"=&gt;false, \"backend_roles\"=&gt;[\"snapshotrestore\"], \"attributes\"=&gt;{}, \"description\"=&gt;\"Demo snapshotrestore user\", \"opendistro_security_roles\"=&gt;[], \"static\"=&gt;false}, \"admin\"=&gt;{\"hash\"=&gt;\"\", \"reserved\"=&gt;true, \"hidden\"=&gt;false, \"backend_roles\"=&gt;[\"admin\"], \"attributes\"=&gt;{}, \"description\"=&gt;\"Demo admin user\", \"opendistro_security_roles\"=&gt;[], \"static\"=&gt;false}, \"kibanaserver\"=&gt;{\"hash\"=&gt;\"\", \"reserved\"=&gt;true, \"hidden\"=&gt;false, \"backend_roles\"=&gt;[], \"attributes\"=&gt;{}, \"description\"=&gt;\"Demo kibanaserver user\", \"opendistro_security_roles\"=&gt;[], \"static\"=&gt;false}, \"kibanaro\"=&gt;{\"hash\"=&gt;\"\", \"reserved\"=&gt;false, \"hidden\"=&gt;false, \"backend_roles\"=&gt;[\"kibanauser\", \"readall\"], \"attributes\"=&gt;{\"attribute1\"=&gt;\"value1\", \"attribute2\"=&gt;\"value2\", \"attribute3\"=&gt;\"value3\"}, \"description\"=&gt;\"Demo kibanaro user\", \"opendistro_security_roles\"=&gt;[], \"static\"=&gt;false}, \"readall\"=&gt;{\"hash\"=&gt;\"\", \"reserved\"=&gt;false, \"hidden\"=&gt;false, \"backend_roles\"=&gt;[\"readall\"], \"attributes\"=&gt;{}, \"description\"=&gt;\"Demo readall user\", \"opendistro_security_roles\"=&gt;[], \"static\"=&gt;false}}} status.each_pair do |user, detail| puts \"username: #{user}\" puts \"description: #{detail.description}\" end # username: logstash # description: Demo logstash user # username: snapshotrestore # description: Demo snapshotrestore user # username: admin # description: Demo admin user # username: kibanaserver # description: Demo kibanaserver user # username: kibanaro # description: Demo kibanaro user # username: readall # description: Demo readall user . ",
+    "url": "https://psyreactor.github.io/opendistro/client/users.html#get-users",
+    "relUrl": "/client/users.html#get-users"
+  },"20": {
+    "doc": "Users",
+    "title": "Get User",
+    "content": "user = Opendistro.user # =&gt; #&lt;Opendistro::ObjectifiedHash:46080 {hash: {\"user_name\"=&gt;\"admin\", \"is_reserved\"=&gt;true, \"is_hidden\"=&gt;false, \"is_internal_user\"=&gt;true, \"user_requested_tenant\"=&gt;nil, \"backend_roles\"=&gt;[\"admin\"], \"custom_attribute_names\"=&gt;[], \"tenants\"=&gt;{\"global_tenant\"=&gt;true, \"admin_tenant\"=&gt;true, \"admin\"=&gt;true}, \"roles\"=&gt;[\"all_access\", \"own_index\"]}} user = Opendistro.user('kibanaro') # =&gt; #&lt;Opendistro::ObjectifiedHash:46080 {hash: {\"kibanaro\"=&gt;{\"hash\"=&gt;\"\", \"reserved\"=&gt;false, \"hidden\"=&gt;false, \"backend_roles\"=&gt;[\"kibanauser\", \"readall\"], \"attributes\"=&gt;{\"attribute1\"=&gt;\"value1\", \"attribute2\"=&gt;\"value2\", \"attribute3\"=&gt;\"value3\"}, \"description\"=&gt;\"Demo kibanaro user\", \"opendistro_security_roles\"=&gt;[], \"static\"=&gt;false}}} status = Opendistro.user('kibanaro') status.to_hash.each_pair do |user, detail| puts \"username: #{user}\" puts \"description: #{detail['description']}\" end # username: kibanaro # description: Demo kibanaro user . ",
+    "url": "https://psyreactor.github.io/opendistro/client/users.html#get-user",
+    "relUrl": "/client/users.html#get-user"
+  },"21": {
+    "doc": "Users",
+    "title": "Create User",
+    "content": "user = Opendistro.create_user('test_user','secret', { description: 'user for test' }) # =&gt; &lt;Opendistro::ObjectifiedHash:46080 {hash: {\"status\"=&gt;\"CREATED\", \"message\"=&gt;\"'test_user' created.\"}} user.status == 'CREATED' # =&gt; true . ",
+    "url": "https://psyreactor.github.io/opendistro/client/users.html#create-user",
+    "relUrl": "/client/users.html#create-user"
+  },"22": {
+    "doc": "Users",
+    "title": "Edit User",
+    "content": "modify = [{ 'op' =&gt; 'replace', 'path': '/description', 'value': 'new description' }] user = Opendistro.edit_user('test_user', modify) # =&gt; #&lt;Opendistro::ObjectifiedHash:46080 {hash: {\"status\"=&gt;\"OK\", \"message\"=&gt;\"'test_user' updated.\"}} user.status == 'OK' # =&gt; true . ",
+    "url": "https://psyreactor.github.io/opendistro/client/users.html#edit-user",
+    "relUrl": "/client/users.html#edit-user"
+  },"23": {
+    "doc": "Users",
+    "title": "Delete User",
+    "content": "users = Opendistro.delete_user('test_users') # =&gt; #&lt;Opendistro::ObjectifiedHash:46080 {hash: {\"status\"=&gt;\"OK\", \"message\"=&gt;\"'test_user' deleted.\"}} user.status == 'OK' # =&gt; true . ",
+    "url": "https://psyreactor.github.io/opendistro/client/users.html#delete-user",
+    "relUrl": "/client/users.html#delete-user"
+  },"24": {
+    "doc": "Users",
+    "title": "Users",
+    "content": ". | Users . | Get Users | Get User | Create User | Edit User | Delete User | . | . ",
+    "url": "https://psyreactor.github.io/opendistro/client/users.html",
+    "relUrl": "/client/users.html"
+  }
+}
