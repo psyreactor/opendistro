@@ -2,6 +2,7 @@
 
 [![Build Status](https://img.shields.io/github/workflow/status/psyreactor/opendistro/CI/master)](https://github.com/psyreactor/opendistro/actions?query=workflow%3ARuby)
 [![Inline docs](https://inch-ci.org/github/psyreactor/opendistro.svg?branch=master)](https://inch-ci.org/github/psyreactor/opendistro)
+[![Coverage Status](https://coveralls.io/repos/github/psyreactor/opendistro/badge.svg)](https://coveralls.io/github/psyreactor/opendistro)
 [![Gem version](https://img.shields.io/gem/v/opendistro.svg)](https://rubygems.org/gems/opendistro)
 [![License](https://img.shields.io/badge/license-BSD-red.svg)](https://github.com/psyreactor/opendistro/blob/master/LICENSE.txt)
 
