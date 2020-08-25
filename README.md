@@ -1,11 +1,11 @@
 # Opendistro
 
-[![Build Status](https://img.shields.io/github/workflow/status/psyreactor/opendistro-ruby/CI/master)](https://github.com/psyreactor/opendistro-ruby/actions?query=workflow%3ARuby)
-[![Inline docs](https://inch-ci.org/github/psyreactor/opendistro-ruby.svg?branch=master)](https://inch-ci.org/github/psyreactor/opendistro-ruby)
+[![Build Status](https://img.shields.io/github/workflow/status/psyreactor/opendistro/CI/master)](https://github.com/psyreactor/opendistro/actions?query=workflow%3ARuby)
+[![Inline docs](https://inch-ci.org/github/psyreactor/opendistro.svg?branch=master)](https://inch-ci.org/github/psyreactor/opendistro)
 [![Gem version](https://img.shields.io/gem/v/opendistro.svg)](https://rubygems.org/gems/opendistro)
 [![License](https://img.shields.io/badge/license-BSD-red.svg)](https://github.com/psyreactor/opendistro/blob/master/LICENSE.txt)
 
-[website](https://psyreactor.github.io/opendistro-ruby/) |
+[website](https://psyreactor.github.io/opendistro/) |
 [documentation](https://www.rubydoc.info/gems/opendistro/frames) 
 
 A Ruby wrapper around the Opendistro API.
