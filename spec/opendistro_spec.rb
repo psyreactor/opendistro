@@ -26,7 +26,7 @@ describe Opendistro do
       actions = described_class.actions
       expect(actions).to be_an Array
       expect(actions.first).to be_a Symbol
-      expect(actions.min).to eq(:create_user)
+      expect(actions.min).to eq(:create_role)
     end
   end
 
