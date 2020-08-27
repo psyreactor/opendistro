@@ -7,6 +7,7 @@ module Opendistro
 
     # Please keep in alphabetical order
     include Cache
+    include Roles
     include Users
 
     # Text representation of the client, masking private token.
