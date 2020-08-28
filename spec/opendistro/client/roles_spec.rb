@@ -38,7 +38,7 @@ describe Opendistro::Client do
   describe '.create_role' do
     context 'when successful request' do
       before do
-        @options = { cluster_permissions: ['cluster_composite_ops', 'indices_monitor'], index_permissions: [{ index_patterns: ['api*'], dls: '', fls: [], masked_fields: [], allowed_actions: ['read']}], tenant_permissions: [{ tenant_patterns: ['human_resources'], allowed_actions: ['kibana_all_read']}] }
+        @options = { cluster_permissions: %w[cluster_composite_ops indices_monitor], index_permissions: [{ index_patterns: ['api*'], dls: '', fls: [], masked_fields: [], allowed_actions: ['read'] }], tenant_permissions: [{ tenant_patterns: ['human_resources'], allowed_actions: ['kibana_all_read'] }] }
         stub_put('/_opendistro/_security/api/roles/my_test_role', 'role_created').with(body: @options)
         @role = Opendistro.create_role('my_test_role', @options)
       end
@@ -64,7 +64,7 @@ describe Opendistro::Client do
 
   describe '.edit_role' do
     before do
-      @options = { cluster_permissions: ['cluster_composite_ops', 'indices_monitor'], index_permissions: [{ index_patterns: ['api-*'], dls: '', fls: [], masked_fields: [], allowed_actions: ['read']}], tenant_permissions: [{ tenant_pattern: ['human_resources'], allowed_actions: ['kibana_all_read']}] }
+      @options = { cluster_permissions: %w[cluster_composite_ops indices_monitor], index_permissions: [{ index_patterns: ['api-*'], dls: '', fls: [], masked_fields: [], allowed_actions: ['read'] }], tenant_permissions: [{ tenant_pattern: ['human_resources'], allowed_actions: ['kibana_all_read'] }] }
       stub_put('/_opendistro/_security/api/roles/my_test_role', 'role_updated').with(body: @options)
       @role = Opendistro.edit_role('my_test_role', @options)
     end
