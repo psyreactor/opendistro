@@ -7,8 +7,8 @@ require 'opendistro/version'
 Gem::Specification.new do |gem|
   gem.name          = 'opendistro'
   gem.version       = Opendistro::VERSION
-  gem.authors       = ['Lucas Mariani']
-  gem.email         = ['marianilucas@gmail.com']
+  gem.authors       = ['Lucas Mariani','Hernan Matias Perez','Lucas Alejandro Kenda']
+  gem.email         = ['marianilucas@gmail.com','hernanmatiasperez@yahoo.com.ar','lucaskenda@gmail.com']
   gem.description   = 'Ruby client and CLI for Opendistro API'
   gem.summary       = 'A Ruby wrapper and CLI for the Opendistro API'
   gem.homepage      = 'https://github.com/psyreactor/opendistro'
