@@ -38,7 +38,7 @@ describe Opendistro::Client do
   describe '.create_role_mapping' do
     context 'when successful request' do
       before do
-        @options = { backend_roles: ['starfleet','captains','defectors','cn=ldaprole','ou=groups','dc=example','dc=com'], hosts: ['*.starfleetintranet.com'], users: ['worf'] }
+        @options = { backend_roles: ['starfleet', 'captains', 'defectors', 'cn=ldaprole', 'ou=groups', 'dc=example', 'dc=com'], hosts: ['*.starfleetintranet.com'], users: ['worf'] }
         stub_put('/_opendistro/_security/api/rolesmapping/my_test_role_mapping', 'role_mapping_created').with(body: @options)
         @role_mapping = Opendistro.create_role_mapping('my_test_role_mapping', @options)
       end
@@ -64,7 +64,7 @@ describe Opendistro::Client do
 
   describe '.edit_role_mapping' do
     before do
-      @options = { backend_roles: ['starfleet','captains','defectors','cn=ldaprole','ou=groups','dc=example','dc=com'], hosts: ['*.starfleetintranet.com'], users: ['worf'] }
+      @options = { backend_roles: ['starfleet', 'captains', 'defectors', 'cn=ldaprole', 'ou=groups', 'dc=example', 'dc=com'], hosts: ['*.starfleetintranet.com'], users: ['worf'] }
       stub_put('/_opendistro/_security/api/rolesmapping/my_test_role_mapping', 'role_mapping_updated').with(body: @options)
       @role_mapping = Opendistro.edit_role_mapping('my_test_role_mapping', @options)
     end
