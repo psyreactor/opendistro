@@ -77,3 +77,13 @@ users = Opendistro.delete_user('test_users')
 user.status == 'OK'
 # => true
 ```
+
+# Cache
+
+## Flush Cache
+```ruby
+cache = Opendistro.flush_cache()
+# => #<Opendistro::ObjectifiedHash:46220 {hash: {"status"=>"OK", "message"=>"Cache flushed successfully."}}
+cache.status == 'OK'
+# => true
+```

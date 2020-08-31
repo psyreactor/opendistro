@@ -73,16 +73,16 @@ class Opendistro::Client
     # Updates individual attributes of a role.
     #
     # @example
-    #   Opendistro.edit_role_artribute('my_test_role', [{"op": "remove", "path": "/index_permissions/0/dls"}])
+    #   Opendistro.edit_role_attribute('my_test_role', [{"op": "remove", "path": "/index_permissions/0/dls"}])
     #   or
-    #   Opendistro.edit_role_artribute('my_test_role', [{"op": "replace", "path": "/index_permissions/0/fls", "value": ["myfield1", "myfield2"]}])
+    #   Opendistro.edit_role_attribute('my_test_role', [{"op": "replace", "path": "/index_permissions/0/fls", "value": ["myfield1", "myfield2"]}])
     #
     # @param  [String] rolename The rolename of a role.
     # @param  [Hash] options A customizable set of options.
     # @return [Opendistro::ObjectifiedHash] Information about updated role.
-    def edit_role_artribute(rolename, options = {})
+    def edit_role_attribute(rolename, options = {})
       patch("/_opendistro/_security/api/roles/#{rolename}", body: options)
     end
-    alias role_edit_artribute edit_role_artribute
+    alias role_edit_attribute edit_role_attribute
   end
 end

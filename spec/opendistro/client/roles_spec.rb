@@ -93,11 +93,11 @@ describe Opendistro::Client do
     end
   end
 
-  describe '.edit_role_artribute' do
+  describe '.edit_role_attribute' do
     before do
       @options = { op: 'remove', path: '/index_permissions/0/dls' }
       stub_patch('/_opendistro/_security/api/roles/my_test_role', 'role_updated').with(body: @options)
-      @role = Opendistro.edit_role_artribute('my_test_role', @options)
+      @role = Opendistro.edit_role_attribute('my_test_role', @options)
     end
 
     it 'gets the correct resource' do
