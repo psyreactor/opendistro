@@ -81,7 +81,7 @@ class Opendistro::Client
     # @param  [Hash] options A customizable set of options.
     # @return [Opendistro::ObjectifiedHash] Information about updated role.
     def edit_role_attribute(rolename, options = {})
-      patch("/_opendistro/_security/api/roles/#{rolename}", body: options)
+      patch("/_opendistro/_security/api/roles/#{rolename}", body: options.to_json)
     end
     alias role_edit_attribute edit_role_attribute
   end
